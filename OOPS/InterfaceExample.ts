@@ -42,16 +42,46 @@ interface Food
 
 
 
+
 function DisplayFood(name:string,cost:number,origin:string):void
 {
     console.log("Food name: "+name+" cost: "+cost+" origin: "+origin);
 }
 
 
-let Ajith:Food=DisplayFood;
-let Deol:Food=DisplayFood;
+var Ajith:Food=DisplayFood;
+var Deol:Food=DisplayFood;
 
 
 Ajith("Rogan Josh",1000,"kasmiri");
 Deol("Bhave bhuji",350,"mumbai");
 
+// Readonly interface
+
+interface Country
+{
+    Name:string;
+    Capital:string;
+}
+
+
+var sweden:Readonly<Country>={
+    Name:"sweden",
+    Capital:"Stockholm"
+}
+
+//sweden.Name="america";  //compile time error
+
+console.log(sweden);
+
+
+var America:Country={
+    Name:"United States of America",
+    Capital:"Washington D.C"
+}
+
+console.log(America);
+
+America.Name="USA";  // the propery of interface can be changed here.
+
+console.log(America);
