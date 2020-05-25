@@ -33,11 +33,12 @@ console.log(NewsAgency2.indexOf('W'));
 console.log("UperCase: "+NewsAgency2.toUpperCase());
 console.log("LowerCase: "+NewsAgency2.toLowerCase());
 
-NewsAgency2.replace('World','Mundo');
-NewsAgency1.replace('World','la Monde');
+console.log(typeof(NewsAgency2.replace('World','Mundo')));
+console.log(NewsAgency1.replace('World','Welt'));
 
 
-console.log( fruit.split(','));
+
+console.log( typeof(fruit.split(',')));
 
 
 
